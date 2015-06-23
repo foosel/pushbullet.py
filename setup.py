@@ -3,8 +3,9 @@ import sys
 
 from setuptools import setup
 
-with open("./pushbullet/__version__.py") as version_file:
-    version = version_file.read().split("\"")[1]
+#with open("./pushbullet/__version__.py") as version_file:
+#    version = version_file.read().split("\"")[1]
+version = "dev"
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
@@ -25,7 +26,7 @@ def read(fname):
         return ""
 
 setup(
-    name = "pushbullet.py",
+    name = "pushbullet.py.fixed",
     version = version,
     author = "Richard Borcsik",
     author_email = "borcsikrichard@gmail.com",
